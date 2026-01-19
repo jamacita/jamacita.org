@@ -1,246 +1,208 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Framework | Jamacita.org</title>
-  <meta name="description" content="Jamacita operates as a functional framework focused on translating complex requirements into workable systems." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jamacita</title>
+  <meta name="description" content="Jamacita — structured thinking, human experience, systems design, and innovation.">
+  <meta name="color-scheme" content="light dark">
 
   <style>
-    :root {
+    :root{
+      --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+              Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
       --bg: #ffffff;
-      --fg: #111111;
-      --muted: #4b4b4b;
-      --hairline: #d9d9d9;
-      --maxw: 860px;
+      --fg: #0c0c0d;
+      --muted: rgba(12,12,13,0.68);
+      --hair: rgba(12,12,13,0.10);
+      --card: rgba(12,12,13,0.03);
+      --focus: rgba(0,0,0,0.25);
+
+      --max: 72ch;
+      --pad: clamp(1.25rem, 4vw, 2.25rem);
+      --r: 14px;
+
+      --h1: clamp(2.1rem, 5vw, 3.1rem);
+      --h2: clamp(1.15rem, 2.2vw, 1.45rem);
+      --p: 1rem;
+      --p2: 0.925rem;
+      --p3: 0.85rem;
     }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0b0c10;
+        --fg: #f2f3f5;
+        --muted: rgba(242,243,245,0.70);
+        --hair: rgba(242,243,245,0.14);
+        --card: rgba(242,243,245,0.06);
+        --focus: rgba(255,255,255,0.28);
+      }
+    }
+
+    *{ box-sizing: border-box; }
+
+    html, body{
+      height: 100%;
       margin: 0;
       background: var(--bg);
       color: var(--fg);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: var(--font);
+      font-size: var(--p);
       line-height: 1.55;
+      -webkit-text-size-adjust: 100%;
       text-rendering: optimizeLegibility;
     }
 
-    a {
+    a{
       color: inherit;
-      text-decoration: underline;
-      text-underline-offset: 0.18em;
-    }
-    a:focus-visible {
-      outline: 2px solid var(--fg);
-      outline-offset: 3px;
-    }
-
-    header {
-      border-bottom: 1px solid var(--hairline);
-      background: var(--bg);
-    }
-
-    .wrap {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 28px 20px;
-    }
-
-    .topbar {
-      display: flex;
-      gap: 18px;
-      align-items: baseline;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    main { padding: 36px 0 10px; }
-
-    h1 {
-      margin: 0 0 14px 0;
-      font-size: clamp(30px, 4vw, 44px);
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-    }
-
-    h2 {
-      margin: 42px 0 12px 0;
-      font-size: 18px;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    p { margin: 0 0 14px 0; }
-
-    .lead {
-      font-size: 18px;
-      color: var(--fg);
-      max-width: 62ch;
-    }
-
-    .muted { color: var(--muted); }
-
-    .rule {
-      border-top: 1px solid var(--hairline);
-      margin: 28px 0 0;
-      padding-top: 28px;
-    }
-
-    ol {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    ol li { margin: 0 0 10px 0; }
-    ol li strong { font-weight: 700; }
-
-    ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-
-    .cta {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-
-    .cta a {
-      display: inline-block;
-      padding: 10px 14px;
-      border: 1px solid var(--hairline);
       text-decoration: none;
+      border-bottom: 1px solid var(--hair);
+    }
+    a:hover{ border-bottom-color: transparent; }
+    a:focus-visible{
+      outline: 3px solid var(--focus);
+      outline-offset: 4px;
+      border-radius: 10px;
+      border-bottom-color: transparent;
     }
 
-    .cta a:hover { border-color: var(--muted); }
-
-    footer {
-      border-top: 1px solid var(--hairline);
-      margin-top: 42px;
+    .wrap{
+      min-height: 100%;
+      display: grid;
+      place-items: start center;
+      padding: calc(var(--pad) * 1.1) var(--pad);
     }
 
-    .footer-note {
-      max-width: 70ch;
+    .card{
+      width: min(100%, var(--max));
+      padding: calc(var(--pad) * 1.05);
+      border: 1px solid var(--hair);
+      border-radius: var(--r);
+      background: var(--card);
     }
 
-    /* Accessibility: respect reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      * { scroll-behavior: auto !important; transition: none !important; }
+    header{
+      display: grid;
+      gap: 0.6rem;
+      padding-bottom: 1.05rem;
+      border-bottom: 1px solid var(--hair);
+      margin-bottom: 1.05rem;
+    }
+
+    h1{
+      margin: 0;
+      font-size: var(--h1);
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+
+    .lead{
+      margin: 0;
+      color: var(--muted);
+      font-size: var(--p2);
+      max-width: 66ch;
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+      margin-top: 0.2rem;
+    }
+    @media (min-width: 720px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .tile{
+      border: 1px solid var(--hair);
+      border-radius: calc(var(--r) - 2px);
+      padding: 0.95rem 1rem;
+      background: transparent;
+    }
+
+    .tile h2{
+      margin: 0 0 0.25rem 0;
+      font-size: var(--h2);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .tile p{
+      margin: 0;
+      color: var(--muted);
+      font-size: var(--p2);
+    }
+
+    footer{
+      margin-top: 1.1rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid var(--hair);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: var(--p3);
+      color: var(--muted);
+    }
+
+    .pill{
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      padding: 0.25rem 0.5rem;
+      border: 1px solid var(--hair);
+      border-radius: 999px;
+      color: var(--muted);
+    }
+
+    .links{
+      display: inline-flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <div class="topbar">
-        <div class="brand">Jamacita.org</div>
-        <nav aria-label="Primary">
-          <ul>
-            <li><a href="/framework">Framework</a></li>
-            <li><a href="/industries">Industries</a></li>
-            <li><a href="/capabilities">Capabilities</a></li>
-            <li><a href="/applications">Applications</a></li>
-            <li><a href="/notes">Notes</a></li>
-            <li><a href="/about">About</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <h1>Jamacita</h1>
+        <p class="lead">
+          Structured thinking, human experience, systems design, and innovation — across domains.
+        </p>
+      </header>
 
-  <main>
-    <div class="wrap">
-      <h1>Framework</h1>
-
-      <p class="lead"><strong>Structures fail where translation fails.</strong></p>
-      <p class="lead">Rules describe intent.<br />Operations execute reality.</p>
-      <p class="lead">Most breakdowns happen in between.</p>
-
-      <section class="rule" aria-labelledby="gap">
-        <h2 id="gap">The gap</h2>
-        <p>Regulation is abstract.<br />Operations are concrete.</p>
-        <p>Between both, translation is often assumed —<br />and rarely designed.</p>
-        <p>That gap produces friction, cost and inconsistency.<br />Not because rules are wrong.<br />But because they are not made executable.</p>
-      </section>
-
-      <section class="rule" aria-labelledby="framework">
-        <h2 id="framework">The framework</h2>
-        <p>Jamacita operates as a functional framework focused on one task:</p>
-        <p><strong>Making complex requirements workable in real systems.</strong></p>
-        <p>No interpretation.<br />No representation.<br />No influence.</p>
-        <p><strong>Only translation.</strong></p>
-      </section>
-
-      <section class="rule" aria-labelledby="how">
-        <h2 id="how">How the framework works</h2>
-        <ol>
-          <li><strong>Complexity is reduced, not simplified</strong><br />Requirements are broken down until they can be executed.</li>
-          <li><strong>Impact becomes visible</strong><br />Effects on processes, systems and people are mapped explicitly.</li>
-          <li><strong>Execution is designed upfront</strong><br />Compliance is embedded before operations scale.</li>
-          <li><strong>Proof is defined early</strong><br />What must be verifiable is specified before it is required.</li>
-        </ol>
-      </section>
-
-      <section class="rule" aria-labelledby="not">
-        <h2 id="not">What this framework is not</h2>
-        <ul>
-          <li>Not a consultancy pitch</li>
-          <li>Not a policy position</li>
-          <li>Not a legal opinion</li>
-          <li>Not advocacy</li>
-        </ul>
-        <p>No access.<br />No narrative.<br />No persuasion.</p>
-      </section>
-
-      <section class="rule" aria-labelledby="where">
-        <h2 id="where">Where this framework applies</h2>
-        <ul>
-          <li>When rules meet real people</li>
-          <li>When audits meet operations</li>
-          <li>When systems comply on paper but fail in practice</li>
-        </ul>
-        <p>Across tourism, mobility, logistics, media and commerce.</p>
-      </section>
-
-      <section class="rule" aria-labelledby="why">
-        <h2 id="why">Why translation matters</h2>
-        <p>Late compliance creates tension.<br />Invisible requirements create risk.<br />Unclear responsibility creates failure.</p>
-        <p>Translation turns intent into structure.<br />Structure enables consistency.<br />Consistency builds trust.</p>
-      </section>
-
-      <section class="rule" aria-labelledby="start">
-        <h2 id="start">This is the starting point</h2>
-        <p>The framework exists to be applied, adapted and connected.</p>
-
-        <div class="cta" aria-label="Next steps">
-          <a href="/industries">View industries</a>
-          <a href="/capabilities">View capabilities</a>
+      <section class="grid" aria-label="Focus areas">
+        <div class="tile">
+          <h2>Human Experience</h2>
+          <p>Guest journeys, service design, operational clarity, and measurable delight.</p>
+        </div>
+        <div class="tile">
+          <h2>Systems &amp; Strategy</h2>
+          <p>Decision models, structured analysis, and pragmatic roadmaps that ship.</p>
+        </div>
+        <div class="tile">
+          <h2>Public Policy</h2>
+          <p>Policy-to-product translation, governance, compliance, and stakeholder logic.</p>
+        </div>
+        <div class="tile">
+          <h2>Technology</h2>
+          <p>Lean digital architecture, automation, data structures, and toolchains.</p>
         </div>
       </section>
-    </div>
-  </main>
 
-  <footer>
-    <div class="wrap">
-      <p class="footer-note muted">Jamacita focuses on structure and implementation — not on individuals, representation or attribution.</p>
+      <footer>
+        <span class="pill">jamacita.org</span>
+        <span class="links">
+          <a href="https://github.com/jamacita/jamacita.org" rel="noopener">GitHub</a>
+          <a href="https://jamacita.org" rel="noopener">Home</a>
+        </span>
+      </footer>
     </div>
-  </footer>
+  </div>
 </body>
 </html>
