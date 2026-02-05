@@ -163,6 +163,33 @@
       gap: 0.9rem;
       flex-wrap: wrap;
     }
+
+    /* Incubator Themescapes */
+    #themescapes { margin-top: 1.35rem; padding-top: 1.05rem; border-top: 1px solid var(--hair); }
+    .ts-header { margin-bottom: 0.85rem; }
+    .ts-title { margin: 0; font-size: var(--h2); letter-spacing: -0.01em; line-height: 1.2; }
+    .ts-subline { margin: 0.35rem 0 0; font-size: var(--p2); color: var(--muted); }
+    .ts-legend { margin: 0.55rem 0 0; font-size: var(--p3); color: var(--muted); }
+
+    .ts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+      margin-top: 0.9rem;
+    }
+    @media (min-width: 720px){
+      .ts-grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .ts-card{
+      border: 1px solid var(--hair);
+      border-radius: calc(var(--r) - 2px);
+      padding: 0.95rem 1rem;
+      background: transparent;
+      display: block;
+    }
+    .ts-card:hover{ border-color: transparent; }
+    .ts-name{ display: block; font-size: var(--h2); letter-spacing: -0.01em; line-height: 1.2; }
   </style>
 </head>
 
@@ -193,6 +220,22 @@
           <h2>Technology</h2>
           <p>Lean digital architecture, automation, data structures, and toolchains.</p>
         </div>
+      </section>
+
+      <section id="themescapes" aria-label="Incubator Themescapes">
+        <header class="ts-header">
+          <h2 class="ts-title">Incubator Themescapes</h2>
+          <p class="ts-subline">Clarity, not volume.</p>
+          <p class="ts-legend">Sense · Rules · Exchange · Delivery · Outcomes</p>
+        </header>
+
+        <nav class="ts-grid" aria-label="Themescape navigation">
+          <a class="ts-card" href="themescapes/meaning/"><span class="ts-name">Meaning</span></a>
+          <a class="ts-card" href="themescapes/trust/"><span class="ts-name">Trust</span></a>
+          <a class="ts-card" href="themescapes/value/"><span class="ts-name">Value</span></a>
+          <a class="ts-card" href="themescapes/craft/"><span class="ts-name">Craft</span></a>
+          <a class="ts-card" href="themescapes/impact/"><span class="ts-name">Impact</span></a>
+        </nav>
       </section>
 
       <footer>
