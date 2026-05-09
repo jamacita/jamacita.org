@@ -1,0 +1,15 @@
+{
+  "name": "Jamacita TDM Rights Reservation",
+  "url": "https://jamacita.org/rights/",
+  "tdm-reservation": true,
+  "permissions": {
+    "text_and_data_mining": "reserved",
+    "machine_learning_training": "not_permitted",
+    "model_fine_tuning": "not_permitted",
+    "dataset_inclusion": "not_permitted",
+    "automated_extraction": "not_permitted",
+    "synthetic_imitation": "not_permitted"
+  },
+  "contact": "exchange@jamacita.org",
+  "scope": "All publicly accessible content, wording, structure, terminology and conceptual arrangement on jamacita.org unless expressly stated otherwise."
+}
