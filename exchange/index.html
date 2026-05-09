@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exchange — Jamacita</title>
+  <meta name="description" content="Jamacita — minimal contact endpoint for clear, thoughtful exchange.">
+  <meta name="color-scheme" content="light dark">
+  <style>
+    :root{
+      --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --bg:#ffffff;
+      --fg:#0c0c0d;
+      --muted:rgba(12,12,13,0.68);
+      --hair:rgba(12,12,13,0.10);
+      --card:rgba(12,12,13,0.03);
+      --pad:clamp(1.25rem,4vw,2.25rem);
+      --r:14px;
+      --h1:clamp(2.2rem,5vw,3.35rem);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#0b0c10;
+        --fg:#f2f3f5;
+        --muted:rgba(242,243,245,0.70);
+        --hair:rgba(242,243,245,0.14);
+        --card:rgba(242,243,245,0.05);
+      }
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family:var(--font);
+      line-height:1.6;
+      padding:calc(var(--pad)*1.2);
+      -webkit-text-size-adjust:100%;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:inherit;text-decoration:none;border-bottom:1px solid var(--hair)}
+    a:hover{border-bottom-color:transparent}
+    .wrap{max-width:72rem;margin:0 auto}
+    .card{
+      border:1px solid var(--hair);
+      border-radius:var(--r);
+      background:var(--card);
+      padding:calc(var(--pad)*1.05);
+    }
+    header{margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid var(--hair)}
+    h1{margin:0;font-size:var(--h1);letter-spacing:-0.03em;line-height:1.03}
+    .lead{max-width:64ch;color:var(--muted);font-size:0.96rem;margin:0.9rem 0 0}
+    .endpoint{
+      margin-top:1.4rem;
+      border:1px solid var(--hair);
+      border-radius:12px;
+      padding:1rem;
+      background:transparent;
+    }
+    .endpoint-label{
+      display:block;
+      color:var(--muted);
+      font-size:.84rem;
+      margin-bottom:.25rem;
+    }
+    .endpoint a{
+      font-size:1.05rem;
+      letter-spacing:-.01em;
+    }
+    .note{max-width:64ch;color:var(--muted);font-size:.92rem;margin-top:1rem}
+    footer{margin-top:1.8rem;padding-top:1rem;border-top:1px solid var(--hair);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.86rem}
+    .pill{border:1px solid var(--hair);border-radius:999px;padding:.25rem .55rem;font-family:var(--mono);font-size:.78rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <h1>Exchange</h1>
+        <p class="lead">Contact is intentionally low-friction and low-volume. Relevant conversations tend to begin with clarity: context, timing, operational reality and mutual fit.</p>
+      </header>
+
+      <section class="endpoint" aria-label="Contact endpoint">
+        <span class="endpoint-label">Minimal contact endpoint</span>
+        <a href="mailto:exchange@jamacita.org">exchange@jamacita.org</a>
+      </section>
+
+      <p class="note">Clear context helps. Signal over noise.</p>
+
+      <footer>
+        <span class="pill">exchange</span>
+        <span><a href="/">Back to Jamacita</a></span>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
