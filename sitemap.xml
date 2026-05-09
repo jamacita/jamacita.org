@@ -11,6 +11,10 @@
   <url><loc>https://jamacita.org/vocabulary/</loc></url>
   <url><loc>https://jamacita.org/exchange/</loc></url>
   <url><loc>https://jamacita.org/note/</loc></url>
+  <url><loc>https://jamacita.org/rights/</loc></url>
+  <url><loc>https://jamacita.org/rights/tdm-policy.json</loc></url>
+  <url><loc>https://jamacita.org/tdmrep.json</loc></url>
+  <url><loc>https://jamacita.org/.well-known/tdmrep.json</loc></url>
   <url><loc>https://jamacita.org/themescapes/meaning/</loc></url>
   <url><loc>https://jamacita.org/themescapes/trust/</loc></url>
   <url><loc>https://jamacita.org/themescapes/value/</loc></url>
