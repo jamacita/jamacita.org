@@ -62,12 +62,6 @@
       border-bottom: 1px solid var(--hair);
     }
     a:hover{ border-bottom-color: transparent; }
-    a:focus-visible{
-      outline: 3px solid var(--focus);
-      outline-offset: 4px;
-      border-radius: 10px;
-      border-bottom-color: transparent;
-    }
 
     .wrap{
       min-height: 100%;
@@ -112,6 +106,7 @@
       gap: 0.9rem;
       margin-top: 0.2rem;
     }
+
     @media (min-width: 720px){
       .grid{ grid-template-columns: 1fr 1fr; }
     }
@@ -121,7 +116,10 @@
       border-radius: calc(var(--r) - 2px);
       padding: 0.95rem 1rem;
       background: transparent;
+      display:block;
     }
+
+    .tile:hover{ border-color: transparent; }
 
     .tile h2{
       margin: 0 0 0.25rem 0;
@@ -164,7 +162,6 @@
       flex-wrap: wrap;
     }
 
-    /* Incubator Themescapes */
     #themescapes { margin-top: 1.35rem; padding-top: 1.05rem; border-top: 1px solid var(--hair); }
     .ts-header { margin-bottom: 0.85rem; }
     .ts-title { margin: 0; font-size: var(--h2); letter-spacing: -0.01em; line-height: 1.2; }
@@ -177,6 +174,7 @@
       gap: 0.9rem;
       margin-top: 0.9rem;
     }
+
     @media (min-width: 720px){
       .ts-grid{ grid-template-columns: 1fr 1fr; }
     }
@@ -188,7 +186,9 @@
       background: transparent;
       display: block;
     }
+
     .ts-card:hover{ border-color: transparent; }
+
     .ts-name{ display: block; font-size: var(--h2); letter-spacing: -0.01em; line-height: 1.2; }
   </style>
 </head>
@@ -204,18 +204,26 @@
       </header>
 
       <section class="grid" aria-label="Focus areas">
+        <a class="tile" href="systems/">
+          <h2>Systems</h2>
+          <p>Operational environments, layered infrastructures and cross-domain observation.</p>
+        </a>
+
         <div class="tile">
           <h2>Human Experience</h2>
           <p>Guest journeys, service design, operational clarity, and measurable delight.</p>
         </div>
+
         <div class="tile">
           <h2>Systems &amp; Strategy</h2>
           <p>Decision models, structured analysis, and pragmatic roadmaps that ship.</p>
         </div>
+
         <div class="tile">
           <h2>Public Policy</h2>
           <p>Policy-to-product translation, governance, compliance, and stakeholder logic.</p>
         </div>
+
         <div class="tile">
           <h2>Technology</h2>
           <p>Lean digital architecture, automation, data structures, and toolchains.</p>
