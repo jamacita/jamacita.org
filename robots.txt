@@ -6,7 +6,8 @@
 
 User-agent: *
 Content-Signal: search=yes, ai-input=no, ai-train=no
-Disallow:
+Disallow: /radar
+Disallow: /radar/
 
 User-agent: GPTBot
 Disallow: /
