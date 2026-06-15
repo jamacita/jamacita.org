@@ -17,6 +17,14 @@ website.
 
 ---
 
+## Continuity
+
+Jamacita has been active since 2015. By 2025, this had formed a ten-year
+practice arc. The public surface keeps that chronology deliberately quiet:
+continuity functions as context, not as an anniversary claim.
+
+---
+
 ## Deployment
 
 The website is deployed via **Cloudflare Pages**.
