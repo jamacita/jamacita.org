@@ -17,6 +17,22 @@ website.
 
 ---
 
+## Public / Private Design Boundary
+
+This public repository contains only the website implementation required for
+publication and deployment, including HTML, CSS, JavaScript and deployment
+configuration.
+
+Internal brand strategy, corporate-design standards, layout rationale,
+design-token documentation, PDF/letter standards, usage notes and broader
+identity guidance are maintained privately in `jamacita/calypso`.
+
+Design changes for this website may be implemented here when required for the
+public surface. The underlying standards and rationale remain part of the
+private documentation layer and are not maintained in this repository.
+
+---
+
 ## Continuity
 
 Jamacita has been developing since 2015. By 2025, this had formed a ten-year
