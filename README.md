@@ -31,6 +31,18 @@ Design changes for this website may be implemented here when required for the
 public surface. The underlying standards and rationale remain part of the
 private documentation layer and are not maintained in this repository.
 
+### Contribution privacy boundary
+
+Any public contribution surface should describe support as directed toward
+Jamacita's independent work rather than toward a publicly identifiable person
+or disclosed team structure. Public contribution interfaces should not expose
+or imply the number of people behind Jamacita, personal financial circumstances,
+operating dependence, supporter counts, contribution totals, funding progress,
+reach-to-income relationships or comparable financial signals.
+
+Human authorship may be communicated without disclosing civil identity or
+organizational headcount.
+
 ---
 
 ## Continuity
