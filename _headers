@@ -6,3 +6,21 @@
 
 /radar/*
   X-Robots-Tag: noindex, nofollow, noarchive, noimageindex, nosnippet
+
+/terms/modular-analysis
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/terms/modular-analysis/
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/privacy
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/privacy/
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/checkout-support
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/checkout-support/
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
