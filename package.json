@@ -1,0 +1,11 @@
+{
+  "name": "jamacita-org-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/validate-site.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
