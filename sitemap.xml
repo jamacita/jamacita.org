@@ -3,25 +3,29 @@
   <url><loc>https://jamacita.org/</loc></url>
   <url><loc>https://jamacita.org/clarity/</loc></url>
   <url><loc>https://jamacita.org/ways-of-seeing/</loc></url>
+  <url><loc>https://jamacita.org/capability/</loc></url>
   <url><loc>https://jamacita.org/systems/</loc></url>
+  <url><loc>https://jamacita.org/systems/travel/</loc></url>
+  <url><loc>https://jamacita.org/systems/mobility/</loc></url>
+  <url><loc>https://jamacita.org/systems/media/</loc></url>
+  <url><loc>https://jamacita.org/regional-perspective/</loc></url>
   <url><loc>https://jamacita.org/signals/</loc></url>
   <url><loc>https://jamacita.org/appreciated/</loc></url>
   <url><loc>https://jamacita.org/elsewhere/</loc></url>
   <url><loc>https://jamacita.org/reduced-surface/</loc></url>
-  <url><loc>https://jamacita.org/collaboration/</loc></url>
   <url><loc>https://jamacita.org/operating-principles/</loc></url>
+  <url><loc>https://jamacita.org/collaboration/</loc></url>
+  <url><loc>https://jamacita.org/fair-open-innovation/</loc></url>
   <url><loc>https://jamacita.org/exchange/</loc></url>
   <url><loc>https://jamacita.org/note/</loc></url>
   <url><loc>https://jamacita.org/rights/</loc></url>
-  <url><loc>https://jamacita.org/rights/tdm-policy.json</loc></url>
-  <url><loc>https://jamacita.org/tdmrep.json</loc></url>
-  <url><loc>https://jamacita.org/.well-known/tdmrep.json</loc></url>
+  <url><loc>https://jamacita.org/verify/</loc></url>
   <url><loc>https://jamacita.org/themescapes/meaning/</loc></url>
   <url><loc>https://jamacita.org/themescapes/trust/</loc></url>
   <url><loc>https://jamacita.org/themescapes/value/</loc></url>
   <url><loc>https://jamacita.org/themescapes/craft/</loc></url>
   <url><loc>https://jamacita.org/themescapes/impact/</loc></url>
-  <url><loc>https://jamacita.org/systems/travel/</loc></url>
-  <url><loc>https://jamacita.org/systems/mobility/</loc></url>
-  <url><loc>https://jamacita.org/systems/media/</loc></url>
+  <url><loc>https://jamacita.org/rights/tdm-policy.json</loc></url>
+  <url><loc>https://jamacita.org/tdmrep.json</loc></url>
+  <url><loc>https://jamacita.org/.well-known/tdmrep.json</loc></url>
 </urlset>
