@@ -15,71 +15,13 @@
   <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
-  <div class="wrap">
-    <div class="card card-narrow">
-      <header class="page-header">
-        <h1>Verify</h1>
-        <p class="lead">Integrity proof for selected Jamacita materials.</p>
-        <p>Selected materials may be assigned a cryptographic content fingerprint to support version integrity, timestamp-based traceability and controlled proof context.</p>
-      </header>
-
-      <section class="grid" aria-label="Verification elements">
-        <article class="tile">
-          <h2>Content fingerprint</h2>
-          <p>A SHA-256 hash can represent a specific file or content version. Even a small change creates a different fingerprint.</p>
-        </article>
-        <article class="tile">
-          <h2>Timestamp proof</h2>
-          <p>The fingerprint may be timestamped through an external timestamping service such as OriginStamp or a comparable provider.</p>
-        </article>
-        <article class="tile">
-          <h2>Independent verification</h2>
-          <p>Verification can be performed by recalculating the hash from the original file and comparing it with the stored proof record.</p>
-        </article>
-        <article class="tile">
-          <h2>Controlled disclosure</h2>
-          <p>The original material does not need to be publicly disclosed for the integrity layer to support traceability.</p>
-        </article>
-      </section>
-
-      <section class="section" aria-label="Proof logic">
-        <p class="tag">Proof logic</p>
-        <dl>
-          <div>
-            <dt>1. Stable version</dt>
-            <dd>A specific document, note or publication state is prepared as the relevant reference version.</dd>
-          </div>
-          <div>
-            <dt>2. SHA-256 hash</dt>
-            <dd>A cryptographic fingerprint is generated for that exact version.</dd>
-          </div>
-          <div>
-            <dt>3. Timestamping</dt>
-            <dd>The hash may be anchored through an external timestamping layer.</dd>
-          </div>
-          <div>
-            <dt>4. Later verification</dt>
-            <dd>The original file can later be checked against the proof record without exposing unrelated material.</dd>
-          </div>
-        </dl>
-      </section>
-
-      <section class="section" aria-label="Limits">
-        <p class="tag">Limits</p>
-        <p>This layer is intended as an integrity and traceability signal. It does not replace contractual documentation, legal review, notarial certification, copyright registration or formal evidentiary procedures where such procedures are required.</p>
-      </section>
-
-      <section class="section" aria-label="External reference">
-        <p class="tag">External reference</p>
-        <p>Where an external timestamping layer is used, selected materials may refer to OriginStamp or a comparable timestamping service.</p>
-        <p><a href="https://originstamp.com/en/timestamp" target="_blank" rel="noopener noreferrer">Learn more about OriginStamp</a></p>
-      </section>
-
-      <footer>
-        <span class="pill">jamacita.org</span>
-        <span class="links"><a href="/note/">Site note</a><a href="/rights/">Rights</a><a href="/verify/" title="Cryptographic content fingerprint and timestamp proof">integrity proof</a><a href="/">Home</a></span>
-      </footer>
-    </div>
-  </div>
+  <div class="wrap"><main class="card card-narrow">
+    <header class="page-header"><h1>Verify</h1><p class="lead">Integrity proof for selected Jamacita materials.</p><p>Selected materials may be assigned a cryptographic content fingerprint to support version integrity, timestamp-based traceability and controlled proof context.</p></header>
+    <section class="grid" aria-label="Verification elements"><article class="tile"><h2>Content fingerprint</h2><p>A SHA-256 hash can represent a specific file or content version. Even a small change creates a different fingerprint.</p></article><article class="tile"><h2>Timestamp proof</h2><p>The fingerprint may be timestamped through an external timestamping service such as OriginStamp or a comparable provider.</p></article><article class="tile"><h2>Independent verification</h2><p>Verification can be performed by recalculating the hash from the original file and comparing it with the stored proof record.</p></article><article class="tile"><h2>Controlled disclosure</h2><p>The original material does not need to be publicly disclosed for the integrity layer to support traceability.</p></article></section>
+    <section class="section" aria-label="Proof logic"><p class="tag">Proof logic</p><dl><div><dt>1. Stable version</dt><dd>A specific document, note or publication state is prepared as the relevant reference version.</dd></div><div><dt>2. SHA-256 hash</dt><dd>A cryptographic fingerprint is generated for that exact version.</dd></div><div><dt>3. Timestamping</dt><dd>The hash may be anchored through an external timestamping layer.</dd></div><div><dt>4. Later verification</dt><dd>The original file can later be checked against the proof record without exposing unrelated material.</dd></div></dl></section>
+    <section class="section" aria-label="Limits"><p class="tag">Limits</p><p>This layer is intended as an integrity and traceability signal. It does not replace contractual documentation, legal review, notarial certification, copyright registration or formal evidentiary procedures where such procedures are required.</p></section>
+    <section class="section" aria-label="External reference"><p class="tag">External reference</p><p>Where an external timestamping layer is used, selected materials may refer to OriginStamp or a comparable timestamping service.</p><p><a href="https://originstamp.com/en/timestamp" target="_blank" rel="noopener noreferrer">Learn more about OriginStamp</a></p></section>
+    <footer><span class="pill">verify</span><span class="links"><a href="/note/">Site note</a><a href="/rights/">Rights</a><a href="/">Back to Jamacita</a></span></footer>
+  </main></div>
 </body>
 </html>
