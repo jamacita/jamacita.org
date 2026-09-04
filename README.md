@@ -41,6 +41,28 @@ continuity functions as context, not as an anniversary claim.
 
 ---
 
+## Site quality baseline
+
+The site remains intentionally lightweight and does not require a framework or
+build system. Technical consistency is checked with a dependency-free Node.js
+validator.
+
+Run locally:
+
+```bash
+npm run check
+```
+
+The validator checks the shared HTML baseline, metadata and canonical URLs,
+central stylesheet usage, semantic page structure, sitemap coverage and
+internal-link integrity. GitHub Actions runs the same check automatically for
+pushes and pull requests targeting `main`.
+
+A reusable implementation shell for new regular pages is documented in
+`.github/PAGE_TEMPLATE.md`.
+
+---
+
 ## Deployment
 
 The website is deployed via **Cloudflare Pages**.
